@@ -102,17 +102,37 @@
         
         @media (max-width: 380px) {
             .logo-text {
-                font-size: 0.625rem;
-                line-height: 0.75rem;
+                font-size: 0.625rem !important;
+                line-height: 0.75rem !important;
             }
             
             .logo-img {
-                height: 1.5rem;
-                width: 1.5rem;
+                height: 1.5rem !important;
+                width: 1.5rem !important;
             }
             
             .navbar-container {
-                padding: 0.25rem 0.375rem;
+                padding: 0.125rem 0.25rem !important;
+            }
+        }
+        
+        /* EMERGENCY MOBILE FIX */
+        @media (max-width: 640px) {
+            .navbar-container {
+                padding: 0.25rem 0.5rem !important;
+            }
+            
+            .logo-text {
+                font-size: 0.75rem !important;
+            }
+            
+            .logo-img {
+                height: 1.75rem !important;
+                width: 1.75rem !important;
+            }
+            
+            nav {
+                padding: 0.25rem 0 !important;
             }
         }
     </style>
@@ -195,7 +215,7 @@
         </div>
     </header>
     
-    <script src="ca.js?v=202604230327"></script>
+    <script src="ca.js?v=202604230331"></script>
     
     <!-- Hero Section -->
     <section class="relative h-[100dvh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh] bg-cover bg-top sm:bg-center md:bg-center lg:bg-center xl:bg-center bg-fixed bg-no-repeat flex flex-col sm:flex-col md:flex-col lg:flex-col xl:flex-col justify-end sm:justify-center md:justify-center lg:justify-center xl:justify-center bg-[center_25%] sm:bg-center md:bg-center lg:bg-center xl:bg-center" style="background-image: url('img/hero.jpeg');">
