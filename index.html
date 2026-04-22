@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Vows Salon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Hamburger Animation */
+        .hamburger-line {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: center;
+        }
+        
+        .hamburger.active .line1 {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .hamburger.active .line2 {
+            opacity: 0;
+        }
+        
+        .hamburger.active .line3 {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
+        /* Mobile Menu Animation */
+        .mobile-menu {
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+        
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        /* Mobile Menu Items Animation */
+        .mobile-menu-item {
+            transform: translateX(-20px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .mobile-menu.active .mobile-menu-item {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .mobile-menu.active .mobile-menu-item:nth-child(1) { transition-delay: 0.1s; }
+        .mobile-menu.active .mobile-menu-item:nth-child(2) { transition-delay: 0.2s; }
+        .mobile-menu.active .mobile-menu-item:nth-child(3) { transition-delay: 0.3s; }
+        .mobile-menu.active .mobile-menu-item:nth-child(4) { transition-delay: 0.4s; }
+        .mobile-menu.active .mobile-menu-item:nth-child(5) { transition-delay: 0.5s; }
+        
+        /* Perfect Mobile Responsiveness */
+        @media (max-width: 640px) {
+            .navbar-container {
+                padding: 0.75rem 1rem;
+            }
+            
+            .logo-text {
+                font-size: 1.125rem;
+                line-height: 1.25rem;
+            }
+            
+            .logo-img {
+                height: 2.5rem;
+                width: 2.5rem;
+            }
+            
+            .hamburger-btn {
+                padding: 0.5rem;
+            }
+            
+            .mobile-menu {
+                padding: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 1rem;
+                line-height: 1.125rem;
+            }
+            
+            .logo-img {
+                height: 2.25rem;
+                width: 2.25rem;
+            }
+            
+            .navbar-container {
+                padding: 0.5rem 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-gradient-to-r from-amber-950/95 via-amber-900/95 to-amber-950/95 backdrop-blur-lg shadow-2xl border-b border-amber-700/40" style="font-family: 'Playfair Display', serif;">
+        <nav class="container mx-auto navbar-container px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center max-w-7xl">
+            <!-- Left corner -->
+            <div class="flex items-center gap-2 sm:gap-4 group">
+                <div class="relative">
+                    <img src="img/logo.jpeg" alt="Velvet Vows Salon" class="logo-img h-10 w-10 sm:h-12 sm:w-12 rounded-full ring-2 sm:ring-4 ring-amber-400/50 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                </div>
+                <span class="logo-text text-lg sm:text-2xl font-bold text-amber-200 tracking-wider" style="text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);">Velvet Vows Salon</span>
+            </div>
+            
+            <!-- Desktop Center Navigation -->
+            <div class="hidden lg:flex gap-6 xl:gap-8">
+                <a href="#home" class="text-amber-100 hover:text-amber-200 font-semibold transition-all duration-300 hover:scale-105 relative group text-xs xl:text-sm" style="font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em;">
+                    HOME
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#bridal" class="text-amber-100 hover:text-amber-200 font-semibold transition-all duration-300 hover:scale-105 relative group text-xs xl:text-sm" style="font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em;">
+                    BRIDAL
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#hair" class="text-amber-100 hover:text-amber-200 font-semibold transition-all duration-300 hover:scale-105 relative group text-xs xl:text-sm" style="font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em;">
+                    HAIR
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#contact" class="text-amber-100 hover:text-amber-200 font-semibold transition-all duration-300 hover:scale-105 relative group text-xs xl:text-sm" style="font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em;">
+                    CONTACT
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+            
+            <!-- Desktop Button -->
+            <div class="hidden sm:block">
+                <button class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-amber-900 px-5 sm:px-8 py-2 sm:py-3 rounded-3xl font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-amber-300/50 text-sm sm:text-base" style="box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);">
+                    Get Ready
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="hamburger hamburger-btn lg:hidden text-amber-100 hover:text-amber-200 transition-all duration-300 p-2">
+                <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+                    <span class="hamburger-line line1 block w-6 h-0.5 bg-current rounded-full"></span>
+                    <span class="hamburger-line line2 block w-6 h-0.5 bg-current rounded-full"></span>
+                    <span class="hamburger-line line3 block w-6 h-0.5 bg-current rounded-full"></span>
+                </div>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu lg:hidden bg-gradient-to-r from-amber-950/98 via-amber-900/98 to-amber-950/98 backdrop-blur-lg border-t border-amber-700/40">
+            <div class="container mx-auto navbar-container px-4 sm:px-6 py-4 max-w-7xl">
+                <div class="flex flex-col space-y-3 sm:space-y-4">
+                    <a href="#home" class="mobile-menu-item text-amber-100 hover:text-amber-200 font-semibold transition-all duration-300 hover:scale-105 relative group text-sm sm:text-base py-2" style="font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em;">
+                        HOME
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="#bridal" class="mobile-menu-item text-amber-100 hover:text-amber-200 font-semibold transition-all duration-300 hover:scale-105 relative group text-sm sm:text-base py-2" style="font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em;">
+                        BRIDAL
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="#hair" class="mobile-menu-item text-amber-100 hover:text-amber-200 font-semibold transition-all duration-300 hover:scale-105 relative group text-sm sm:text-base py-2" style="font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em;">
+                        HAIR
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="#contact" class="mobile-menu-item text-amber-100 hover:text-amber-200 font-semibold transition-all duration-300 hover:scale-105 relative group text-sm sm:text-base py-2" style="font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em;">
+                        CONTACT
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <button class="mobile-menu-item bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-amber-900 px-6 py-3 rounded-3xl font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-amber-300/50 text-sm sm:text-base w-full sm:w-auto mt-2" style="box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);">
+                        Get Ready
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <script src="ca.js"></script>
+    
+    <!-- Hero Section -->
+    <section class="relative h-96 sm:h-[500px] bg-cover bg-center bg-no-repeat" style="background-image: url('img/hero.jpeg');">
+        <div class="absolute inset-0 bg-gradient-to-r from-purple-900/60 via-pink-800/40 to-purple-900/60"></div>
+    </section>
+    
+</body>
+</html>
