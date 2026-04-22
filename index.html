@@ -59,44 +59,60 @@
         .mobile-menu.active .mobile-menu-item:nth-child(4) { transition-delay: 0.4s; }
         .mobile-menu.active .mobile-menu-item:nth-child(5) { transition-delay: 0.5s; }
         
-        /* Perfect Mobile Responsiveness */
+        /* Perfect Mobile Responsiveness - Optimized */
         @media (max-width: 640px) {
             .navbar-container {
-                padding: 0.75rem 1rem;
+                padding: 0.5rem 0.75rem;
             }
             
             .logo-text {
-                font-size: 1.125rem;
-                line-height: 1.25rem;
+                font-size: 0.875rem;
+                line-height: 1rem;
             }
             
             .logo-img {
-                height: 2.5rem;
-                width: 2.5rem;
+                height: 2rem;
+                width: 2rem;
             }
             
             .hamburger-btn {
-                padding: 0.5rem;
+                padding: 0.25rem;
             }
             
             .mobile-menu {
-                padding: 1rem;
+                padding: 0.75rem;
             }
         }
         
         @media (max-width: 480px) {
             .logo-text {
-                font-size: 1rem;
-                line-height: 1.125rem;
+                font-size: 0.75rem;
+                line-height: 0.875rem;
             }
             
             .logo-img {
-                height: 2.25rem;
-                width: 2.25rem;
+                height: 1.75rem;
+                width: 1.75rem;
             }
             
             .navbar-container {
-                padding: 0.5rem 0.75rem;
+                padding: 0.375rem 0.5rem;
+            }
+        }
+        
+        @media (max-width: 380px) {
+            .logo-text {
+                font-size: 0.625rem;
+                line-height: 0.75rem;
+            }
+            
+            .logo-img {
+                height: 1.5rem;
+                width: 1.5rem;
+            }
+            
+            .navbar-container {
+                padding: 0.25rem 0.375rem;
             }
         }
     </style>
@@ -185,24 +201,25 @@
     <section class="relative h-[80vh] bg-cover bg-center bg-fixed bg-no-repeat" style="background-image: url('img/hero.jpeg'); background-position: center center;">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
         
-        <!-- Glassmorphism Card - Fully Responsive Design -->
-        <!-- Mobile First: Ultra-compact for small screens -->
-        <!-- Tablet: Balanced sizing for medium screens -->
-        <!-- Desktop: Premium experience for large screens -->
-        <div class="absolute left-2 sm:left-4 md:left-6 lg:left-8 xl:left-12 top-1/2 -translate-y-1/2 w-72 sm:w-80 md:w-88 lg:w-96 xl:w-100 max-w-[90vw] sm:max-w-[85vw] md:max-w-[80vw] lg:max-w-[75vw] xl:max-w-[70vw] z-10">
-            <div class="bg-white/10 backdrop-blur-lg rounded-xl sm:rounded-2xl border border-white/20 shadow-2xl p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
-                <!-- Heading - Responsive Typography -->
-                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-amber-200 mb-3 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4" style="font-family: 'Playfair Display', serif; text-shadow: 0 0 30px rgba(251, 191, 36, 0.5); letter-spacing: 0.05em;">
+        <!-- Glassmorphism Card - Mobile Optimized Responsive Design -->
+        <!-- Mobile: Ultra-compact (320px+) -->
+        <!-- Small Mobile: Compact (380px+) -->
+        <!-- Tablet: Balanced (640px+) -->
+        <!-- Desktop: Premium (1024px+) -->
+        <div class="absolute left-1 sm:left-2 md:left-4 lg:left-6 xl:left-8 top-1/2 -translate-y-1/2 w-64 sm:w-72 md:w-80 lg:w-88 xl:w-96 max-w-[95vw] sm:max-w-[90vw] md:max-w-[85vw] lg:max-w-[80vw] xl:max-w-[75vw] z-10">
+            <div class="bg-white/10 backdrop-blur-lg rounded-lg sm:rounded-xl md:rounded-xl lg:rounded-2xl xl:rounded-2xl border border-white/20 shadow-2xl p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7">
+                <!-- Heading - Mobile Optimized Typography -->
+                <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-amber-200 mb-2 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-4" style="font-family: 'Playfair Display', serif; text-shadow: 0 0 20px rgba(251, 191, 36, 0.5); letter-spacing: 0.02em;">
                     Radiance In Refinement
                 </h2>
                 
-                <!-- Sub-text - Responsive Typography -->
-                <p class="text-white/70 sm:text-white/75 md:text-white/80 lg:text-white/80 xl:text-white/80 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm mb-4 sm:mb-5 md:mb-6 lg:mb-6 xl:mb-6 leading-relaxed" style="font-family: 'Montserrat', sans-serif;">
+                <!-- Sub-text - Mobile Optimized Typography -->
+                <p class="text-white/60 sm:text-white/70 md:text-white/75 lg:text-white/80 xl:text-white/80 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm mb-3 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-6 leading-tight sm:leading-relaxed" style="font-family: 'Montserrat', sans-serif;">
                     Experience premium bridal and salon artistry.
                 </p>
                 
-                <!-- Button - Responsive Sizing -->
-                <button class="w-full bg-gradient-to-r from-amber-300 via-amber-500 to-amber-600 hover:from-amber-400 hover:via-amber-600 hover:to-amber-700 text-amber-900 font-bold py-3 sm:py-3 md:py-4 lg:py-4 xl:py-4 px-4 sm:px-6 md:px-8 lg:px-8 xl:px-8 rounded-lg sm:rounded-xl md:rounded-xl lg:rounded-xl xl:rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl" style="box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3); transition: all 0.3s ease;">
+                <!-- Button - Mobile Optimized Sizing -->
+                <button class="w-full bg-gradient-to-r from-amber-300 via-amber-500 to-amber-600 hover:from-amber-400 hover:via-amber-600 hover:to-amber-700 text-amber-900 font-bold py-2 sm:py-3 md:py-3 lg:py-4 xl:py-4 px-3 sm:px-4 md:px-6 lg:px-8 xl:px-8 rounded-md sm:rounded-lg md:rounded-xl lg:rounded-xl xl:rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl" style="box-shadow: 0 2px 15px rgba(251, 191, 36, 0.3); transition: all 0.3s ease;">
                     RESERVE APPOINTMENT
                 </button>
             </div>
