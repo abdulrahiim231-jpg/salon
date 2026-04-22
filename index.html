@@ -120,7 +120,7 @@
 <body>
     <!-- Navbar -->
     <header class="sticky top-0 z-50 bg-gradient-to-r from-amber-950/95 via-amber-900/95 to-amber-950/95 backdrop-blur-lg shadow-2xl border-b border-amber-700/40" style="font-family: 'Playfair Display', serif;">
-        <nav class="container mx-auto navbar-container px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center max-w-7xl">
+        <nav class="container mx-auto navbar-container px-4 sm:px-6 py-2 sm:py-3 md:py-4 flex justify-between items-center max-w-7xl">
             <!-- Left corner -->
             <div class="flex items-center gap-2 sm:gap-4 group">
                 <div class="relative">
@@ -198,15 +198,14 @@
     <script src="ca.js"></script>
     
     <!-- Hero Section -->
-    <section class="relative h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh] bg-cover bg-center bg-fixed bg-no-repeat" style="background-image: url('img/hero.jpeg'); background-position: center center;">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
+    <section class="relative h-[100dvh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh] bg-cover bg-top sm:bg-center md:bg-center lg:bg-center xl:bg-center bg-fixed bg-no-repeat flex flex-col sm:flex-col md:flex-col lg:flex-col xl:flex-col justify-end sm:justify-center md:justify-center lg:justify-center xl:justify-center" style="background-image: url('img/hero.jpeg'); background-position: 50% 25%;">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent sm:bg-gradient-to-b md:bg-gradient-to-b lg:bg-gradient-to-b xl:bg-gradient-to-b sm:from-transparent sm:via-black/20 sm:to-black/40 md:from-transparent md:via-black/20 md:to-black/40 lg:from-transparent lg:via-black/20 lg:to-black/40 xl:from-transparent xl:via-black/20 xl:to-black/40"></div>
         
-        <!-- Glassmorphism Card - Mobile Optimized Responsive Design -->
-        <!-- Mobile: Ultra-compact (320px+) -->
-        <!-- Small Mobile: Compact (380px+) -->
-        <!-- Tablet: Balanced (640px+) -->
-        <!-- Desktop: Premium (1024px+) -->
-        <div class="absolute left-1 sm:left-2 md:left-4 lg:left-6 xl:left-8 top-1/2 -translate-y-1/2 w-64 sm:w-72 md:w-80 lg:w-88 xl:w-96 max-w-[95vw] sm:max-w-[90vw] md:max-w-[85vw] lg:max-w-[80vw] xl:max-w-[75vw] z-10">
+        <!-- Glassmorphism Card - Mobile Bottom Positioned -->
+        <!-- Mobile: Bottom positioned (320px+) -->
+        <!-- Tablet: Center positioned (640px+) -->
+        <!-- Desktop: Center positioned (1024px+) -->
+        <div class="absolute left-1 sm:left-2 md:left-4 lg:left-6 xl:left-8 bottom-8 sm:top-1/2 md:top-1/2 lg:top-1/2 xl:top-1/2 sm:-translate-y-1/2 md:-translate-y-1/2 lg:-translate-y-1/2 xl:-translate-y-1/2 w-64 sm:w-72 md:w-80 lg:w-88 xl:w-96 max-w-[95vw] sm:max-w-[90vw] md:max-w-[85vw] lg:max-w-[80vw] xl:max-w-[75vw] z-10">
             <div class="bg-white/10 backdrop-blur-lg rounded-lg sm:rounded-xl md:rounded-xl lg:rounded-2xl xl:rounded-2xl border border-white/20 shadow-2xl p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7">
                 <!-- Heading - Mobile Optimized Typography -->
                 <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-amber-200 mb-2 sm:mb-3 md:mb-4 lg:mb-4 xl:mb-4" style="font-family: 'Playfair Display', serif; text-shadow: 0 0 20px rgba(251, 191, 36, 0.5); letter-spacing: 0.02em;">
